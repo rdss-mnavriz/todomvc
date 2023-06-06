@@ -60,6 +60,7 @@ describe('TodoMVC', function () {
     .type('be cool{enter}')
 
     cy.get('.todo-list li').should('have.length', 2)
+    cy.log('TestGitHubAactions')
   })
 
   context('No Todos', function () {
