@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "todomvc-app-css": "2.3.0",
-    "todomvc-common": "1.0.5"
+    "todomvc-common": "1.0.5",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@babel/core": "^7.13.14",
