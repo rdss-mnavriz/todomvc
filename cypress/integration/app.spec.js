@@ -164,7 +164,7 @@ describe('TodoMVC', function () {
       cy.get('.footer').should('be.visible')
     })
   })
-
+  
   context('Mark all as completed', function () {
     // New commands used here:
     // - cy.check    https://on.cypress.io/api/check
