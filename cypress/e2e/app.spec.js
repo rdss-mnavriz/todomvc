@@ -26,7 +26,7 @@ describe('TodoMVC', function () {
   let TODO_ITEM_TWO = 'feed the cat'
   let TODO_ITEM_THREE = 'book a doctors appointment'
 
-  beforeEach(function () {
+  beforeEach( () => {
     // By default Cypress will automatically
     // clear the Local Storage prior to each
     // test which ensures no todos carry over
@@ -92,6 +92,7 @@ describe('TodoMVC', function () {
       cy.get('.new-todo')
       .type(TODO_ITEM_ONE)
       .type('{enter}')
+      
 
       // make sure the 1st label contains the 1st todo text
       cy.get('.todo-list li')
@@ -323,6 +324,7 @@ describe('TodoMVC', function () {
       cy.get('@todos')
       .eq(0)
       .should('contain', TODO_ITEM_ONE)
+
 
       cy.get('@secondTodo').should('contain', 'buy some sausages')
       cy.get('@todos')
