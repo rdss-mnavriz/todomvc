@@ -83,3 +83,18 @@ Cypress.Commands.add('createTodo', function (todo) {
   })
 })
   
+Cypress.Commands.add('acceptCookieBanner', () => {
+// The name of the cookie holding whether the user has accepted
+
+    // the cookie policy
+      const COOKIE_NAME = "cookie_notice"; //TODOfind the right cookie name
+      
+    // The value meaning that user has accepted the cookie policy
+       const COOKIE_VALUE = "true"; //TODO find the right cookie value
+
+     Cypress.on("window:before:load", window => {
+       window.document.cookie = `${COOKIE_NAME}=${COOKIE_VALUE}`;
+  });
+});
+  
+     
